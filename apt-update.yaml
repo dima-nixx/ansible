@@ -4,6 +4,8 @@
   become_user: root
 
   tasks:
+    - name: whoami
+      shell: whoami
     - name: Perform a dist-upgrade.
       ansible.builtin.apt:
         upgrade: yes
