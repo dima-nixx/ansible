@@ -6,6 +6,9 @@
   tasks:
     - name: whoami
       shell: whoami
+      register: asd
+    - debug:
+        var: asd.stdout_lines
     - name: Perform a dist-upgrade.
       ansible.builtin.apt:
         upgrade: yes
